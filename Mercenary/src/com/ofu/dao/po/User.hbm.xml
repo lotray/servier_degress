@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ofu.dao.po">
+	<class name="User" table="user">
+		<id name="Uid">
+			<generator class="native"></generator>
+		</id>
+		<property name="name"  length="60" not-null="true" />
+		<property name="password"  length="20" not-null="true" />
+		<property name="tel"  length="20" not-null="true" />
+		<property name="level"  length="30" />
+		<property name="money"  length="20" />
+	</class>
+</hibernate-mapping>

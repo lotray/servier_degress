@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.il8n.encoding" value="utf-8"/>
+	<package name="mercenary" extends="struts-default">
+		<action name="addUser" class="com.ofu.action.UserAction" method="addUser">
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="login" class="com.ofu.action.UserAction" method="login">
+			<result name="input">/index.jsp</result>
+			<result name="success">/admin/admin.jsp</result>
+		</action>
+		<action name="addtask" class="com.ofu.action.TaskAction" method="addTask">
+			<result name="input">/error.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="findtaskbytitle" class="com.ofu.action.TaskAction" method="findtaskbytitle">
+			<result name="input">/Task/SelectTask.jsp</result>
+			<result name="success">/Task/SelectTask.jsp</result>
+		</action>
+		<action name="findUsers" class="com.ofu.action.UserAction" method="findUsers">
+			<result name="input">/error.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="findUsersbyname" class="com.ofu.action.UserAction" method="findUsersbyname">
+			<result name="input">/User/SelectUser.jsp</result>
+			<result name="success">/User/SelectUser.jsp</result>
+		</action>
+		<action name="finduserinfo" class="com.ofu.action.UserAction" method="finduserinfo">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/ReturnUser.jsp</result>
+		</action>
+		<action name="findrewardbytime" class="com.ofu.action.RewardAction" method="findrewardbytime">
+			<result name="input">/error.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="findrewardbytitle" class="com.ofu.action.RewardAction" method="findrewardbytitle">
+			<result name="input">/Xuanshang/SelectXuanshang.jsp</result>
+			<result name="success">/Xuanshang/SelectXuanshang.jsp</result>
+		</action>
+		<action name="findAllbytime" class="com.ofu.action.RewardAction" method="findrewardbytime">
+			<result name="input">/Xuanshang/SelectXuanshang.jsp</result>
+			<result name="success">/Xuanshang/SelectXuanshang.jsp</result>
+		</action>
+		<action name="findallcategory1" class="com.ofu.action.CategoryAction" method="findallcategory">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Category/CategoryManager.jsp</result>
+		</action>
+		<action name="addcategory" class="com.ofu.action.CategoryAction" method="addcategory">
+			<result name="input">/Category/CategoryManager.jsp</result>
+			<result name="success">/Category/CategoryManager.jsp</result>
+		</action>
+		<action name="deletecategorie" class="com.ofu.action.CategoryAction" method="deletecategorie">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Category/CategoryManager.jsp</result>
+		</action>
+		
+		<action name="deleteUser" class="com.ofu.action.UserAction" method="deleteUser">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/SelectUser.jsp</result>
+		</action>
+		<action name="updateUser" class="com.ofu.action.UserAction" method="updateUser">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/ReturnUser.jsp</result>
+		</action>
+		<action name="jumpUser" class="com.ofu.action.UserAction" method="jumpUser">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/UpdateUser.jsp</result>
+		</action>
+		
+		<action name="jumpReward" class="com.ofu.action.UserAction" method="jumpreward">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/UpdateReward.jsp</result>
+		</action>
+		<action name="updateReward" class="com.ofu.action.UserAction" method="updatereward">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/ReturnUser.jsp</result>
+		</action>
+		<action name="jumpReward1" class="com.ofu.action.UserAction" method="jumpreward">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Xuanshang/UpdateReward1.jsp</result>
+		</action>
+		<action name="updateReward1" class="com.ofu.action.UserAction" method="updatereward">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Xuanshang/SelectXuanshang.jsp</result>
+		</action>
+		<action name="deleteReward" class="com.ofu.action.UserAction" method="deletereward">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/ReturnUser.jsp</result>
+		</action>
+		<action name="deleteReward1" class="com.ofu.action.UserAction" method="deletereward">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Xuanshang/SelectXuanshang.jsp</result>
+		</action>
+		
+		<action name="deleteTask" class="com.ofu.action.UserAction" method="deleteTask">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/ReturnUser.jsp</result>
+		</action>
+		<action name="deleteTask1" class="com.ofu.action.UserAction" method="deleteTask1">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Task/SelectTask.jsp</result>
+		</action>
+		<action name="updateTask" class="com.ofu.action.UserAction" method="updateTask1">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/ReturnUser.jsp</result>
+		</action>
+		<action name="updateTask1" class="com.ofu.action.UserAction" method="updateTask1">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Task/SelectTask.jsp</result>
+		</action>
+		<action name="jumpTask" class="com.ofu.action.UserAction" method="jumpTask">
+			<result name="input">/error.jsp</result>
+			<result name="success">/User/UpdateTask.jsp</result>
+		</action>
+		<action name="jumpTask1" class="com.ofu.action.UserAction" method="jumpTask">
+			<result name="input">/error.jsp</result>
+			<result name="success">/Task/UpdateTask.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	<package name="json" extends="json-default"><!--需要将struts-default改为-->
+		<action name="applogin" class="com.ofu.action.AppUserAction" method="applogin">
+			<result type="json" name="success">
+			<param name="root">dataMap</param> 
+			</result>
+			<!--返回值类型设置为json,不设置返回页面-->
+		</action>
+		<action name="finduserbyid" class="com.ofu.action.AppUserAction" method="finduserbyid">
+			<result type="json" name="success">
+			<param name="root">user</param> 
+			</result>
+			<!--返回值类型设置为json,不设置返回页面-->
+		</action>
+		<action name="test" class="com.ofu.action.TestjsonAction" method="findalluser">
+			<result type="json" name="success">
+			<!--返回值类型设置为json,不设置返回页面-->
+				<param name="root">users</param> 
+			</result>
+		</action>
+		<action name="findallcategory" class="com.ofu.action.AppCategoryAction" method="findallcategories">
+			<result type="json" name="success"/>
+		</action>
+		<action name="findrewardbycategory" class="com.ofu.action.AppRewardAction" method="findrewardbycategory">
+			<result type="json" name="success">
+				<param name="root">rewards</param> 
+			</result>
+		</action>
+		<action name="findreward" class="com.ofu.action.AppRewardAction" method="findreward">
+			<result type="json" name="success">
+				<param name="root">rewards</param> 
+			</result>
+		</action>
+		<action name="appadduser" class="com.ofu.action.AppUserAction" method="appadduser">
+			<result type="json" name="success">
+				<param name="root">dataMap</param> 
+			</result>
+		</action>
+		<action name="findrewardbyid" class="com.ofu.action.AppRewardAction" method="findrewardbyid">
+			<result type="json" name="success">
+				<param name="root">reward</param> 
+			</result>
+		</action>
+		<action name="addreward" class="com.ofu.action.AppRewardAction" method="addreward">
+			<result type="json" name="success">
+				<param name="root">dataMap</param> 
+			</result>
+		</action>
+		<action name="findrewardbyUid" class="com.ofu.action.AppRewardAction" method="findrewardbyUid">
+			<result type="json" name="success">
+				<param name="root">tasks</param> 
+			</result>
+		</action>
+		<action name="appaddtask" class="com.ofu.action.AppTaskAction" method="addtask">
+			<result type="json" name="success">
+				<param name="root">dataMap</param> 
+			</result>
+		</action>
+		<action name="findtaskbyUid" class="com.ofu.action.AppTaskAction" method="findtaskbyUid">
+			<result type="json" name="success">
+				<param name="root">tasks</param> 
+			</result>
+		</action>
+		<action name="giveuptask" class="com.ofu.action.AppTaskAction" method="giveuptask">
+			<result type="json" name="success">
+				<param name="root">dataMap</param> 
+			</result>
+		</action>
+		<action name="uptask" class="com.ofu.action.AppTaskAction" method="uptask">
+			<result type="json" name="success">
+				<param name="root">dataMap</param> 
+			</result>
+		</action>
+		<action name="finishtask" class="com.ofu.action.AppTaskAction" method="finishtask">
+			<result type="json" name="success">
+				<param name="root">dataMap</param> 
+			</result>
+		</action>
+	</package>
+	
+	<package name="chart" extends="struts-default">
+		<result-types>
+            <result-type name="chart" class="org.apache.struts2.dispatcher.ChartResult"></result-type>
+        </result-types>
+        <action name="JFreeChartAction" class="com.ofu.action.ChartAction">
+              <result type="chart"> 
+                   <param name="width">800</param>
+                   <param name="height">600</param>
+            </result>
+        </action>
+	</package>
+	
+</struts>    
+

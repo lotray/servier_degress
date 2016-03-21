@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Mercenary"
+  id="myeclipse.1416658109828"
+  context-root="/Mercenary"
+  j2ee-spec="5.0"
+  archive="Mercenary.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

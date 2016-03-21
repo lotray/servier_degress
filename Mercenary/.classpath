@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/asm-3.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/asm-commons-3.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/asm-tree-3.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/commons-fileupload-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/commons-io-2.2.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/freemarker-2.3.19.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/hibernate-commons-annotations-4.0.4.Final.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/hibernate-core-4.3.5.Final.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/jandex-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/jboss-logging-3.1.3.GA.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/mysql-connector-java-5.1.9-bin.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/ognl-3.0.6.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-aop-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-beans-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-context-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-core-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-expression-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-jdbc-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-orm-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-tx-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/spring-web-4.0.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/struts2-core-2.3.16.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/struts2-spring-plugin-2.3.16.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/S2.3Spring4Hibernate4lib/xwork-core-2.3.16.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/struts-2.3.16.3-all/struts-2.3.16.3/lib/json-lib-2.3-jdk15.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/struts-2.3.16.3-all/struts-2.3.16.3/lib/struts2-json-plugin-2.3.16.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/struts-2.3.16.3-all/struts-2.3.16.3/lib/struts2-jfreechart-plugin-2.3.16.3.jar"/>
+	<classpathentry kind="lib" path="D:/学习/jcommon-1.0.16.jar"/>
+	<classpathentry kind="lib" path="D:/学习/jfreechart-1.0.13.jar"/>
+	<classpathentry kind="lib" path="D:/学习/大三上/企业级java II/安装软件/spring-framework-4.1.2.RELEASE-dist/spring-framework-4.1.2.RELEASE/libs/spring-context-support-4.1.2.RELEASE.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ofu.dao.po">
+	<class name="Reward" table="reward">
+		<id name="Rid">
+			<generator class="native"></generator>
+		</id>
+		<property name="title"/>
+		<property name="starttime"/>
+		<property name="endtime"/>
+		<property name="level" />
+		<property name="money" />
+		<property name="type"/>
+		<property name="content"/>
+		<property name="category" />
+		<property name="RUid" />
+	</class>
+</hibernate-mapping>

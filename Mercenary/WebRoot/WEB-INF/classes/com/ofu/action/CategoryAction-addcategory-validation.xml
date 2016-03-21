@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.2//EN" 
+ "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="category.name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="类别名不能为空"></message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">1</param>
+			<param name="maxLength">12</param>
+			<message>类别名的长度必须在${minLength}和${maxLength}之间</message>
+		</field-validator>
+	</field>
+</validators>

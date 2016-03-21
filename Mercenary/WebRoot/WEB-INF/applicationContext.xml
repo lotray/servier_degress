@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"
+	>
+	<context:annotation-config/>
+	<!-- 数据库配置 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/mercenary"/>
+		<property name="username" value="root"/>
+		<property name="password" value="975991"/>
+	</bean>
+
+	<!-- -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+		<!-- 配置实体描述文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/ofu/dao/po/User.hbm.xml</value>
+				<value>com/ofu/dao/po/Reward.hbm.xml</value>
+				<value>com/ofu/dao/po/Task.hbm.xml</value>
+				<value>com/ofu/dao/po/Category.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 任务调度 -->
+   <!-- 配置调度方法 -->
+<!--   <bean id="reportTask" class="com.ofu.action.Check"/>
+  配置定时器任务
+  <bean id="scheduledReportTask" class="org.springframework.scheduling.commonj.TimerManagerTaskScheduler">
+    <property name="timerTask">
+      <ref bean="reportTask"/>
+    </property>
+     <property name="period">
+      <value>60000</value>
+    </property>
+
+  </bean> -->
+  <!-- 启动定时器 -->
+<!--   <bean id="start" class="org.springframework.scheduling.commonj.TimerManagerFactoryBean">
+    <property name="scheduledTimerTasks">
+      <list>
+      <ref bean="scheduledReportTask"/>
+    </list>
+    </property>
+  </bean> -->
+	<!--事物管理-->
+	<bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="txManager"/>
+		<bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+			<property name="sessionFactory" ref="sessionFactory"/>
+		</bean>
+    <!--User的依赖注入  -->
+	<bean id="UserDao" class="com.ofu.dao.impl.UserDaoimpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	<bean id="UserManagerimpl" class="com.ofu.service.impl.UserManagerimpl">
+		<property name="userDao" ref="UserDao" />
+	</bean>
+	<bean id="UserAction" class="com.ofu.action.UserAction" scope="prototype">
+		<property name="userManager" ref="UserManagerimpl"/>
+	</bean>
+	<!--Task的依赖注入  -->
+	<bean id="TaskDao" class="com.ofu.dao.impl.TaskDaoimpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
+	</bean>
+	<bean id="TaskManagerimpl" class="com.ofu.service.impl.TaskManagerimpl">
+		<property name="taskDao" ref="TaskDao" />
+	</bean>
+	<bean id="TaskAction" class="com.ofu.action.TaskAction" scope="prototype">
+		<property name="taskManager" ref="TaskManagerimpl"/>
+	</bean>
+	<bean id="AppTaskAction" class="com.ofu.action.AppTaskAction" scope="prototype">
+		<property name="taskManager" ref="TaskManagerimpl"/>
+	</bean>
+	<!--Reward的依赖注入  -->
+	<bean id="RewardDao" class="com.ofu.dao.impl.RewardDaoimpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
+	</bean>
+	<bean id="RewardManagerimpl" class="com.ofu.service.impl.RewardManagerimpl">
+		<property name="rewardDao" ref="RewardDao" />
+	</bean>
+	<bean id="RewardAction" class="com.ofu.action.RewardAction" scope="prototype">
+		<property name="rewardManager" ref="RewardManagerimpl"/>
+	</bean>
+	<bean id="AppRewardAction" class="com.ofu.action.AppRewardAction" scope="prototype">
+		<property name="rewardManager" ref="RewardManagerimpl"/>
+	</bean>
+	<!--Caategory的依赖注入  -->
+	<bean id="CategoryDao" class="com.ofu.dao.impl.CategoryDaoimpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
+	</bean>
+	<bean id="CategoryManagerimpl" class="com.ofu.service.impl.CategoryManagerimpl">
+		<property name="categoryDao" ref="CategoryDao" />
+	</bean>
+	<bean id="CategoryAction" class="com.ofu.action.CategoryAction" scope="prototype">
+		<property name="categoryManager" ref="CategoryManagerimpl"/>
+	</bean>
+		<bean id="AppCategoryAction" class="com.ofu.action.AppCategoryAction" scope="prototype">
+		<property name="categoryManager" ref="CategoryManagerimpl"/>
+	</bean>
+	<!-- Test json -->
+	<!-- <bean id="TestjsonAction" class="com.ofu.action.UserAction" scope="prototype">
+		<property name="userManager" ref="UserManagerimpl"/>
+	</bean> -->
+	<bean id="AppUserAction" class="com.ofu.action.AppUserAction" scope="prototype">
+		<property name="userManager" ref="UserManagerimpl"/>
+	</bean>
+</beans>
